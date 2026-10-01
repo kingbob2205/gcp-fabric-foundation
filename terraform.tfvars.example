@@ -1,0 +1,6 @@
+# Copy this file to terraform.tfvars and set your existing project ID.
+# Keep terraform.tfvars private; it is ignored by Git.
+project_id  = "replace-with-your-project-id"
+region      = "europe-west1"
+name_prefix = "fabric-demo"
+
