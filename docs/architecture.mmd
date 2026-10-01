@@ -1,0 +1,12 @@
+flowchart TB
+  P[Existing Google Cloud project]
+  P --> D[Dev VPC]
+  P --> R[Prod VPC]
+  D --> DS[Dev subnet\nPrivate Google Access]
+  R --> RS[Prod subnet\nPrivate Google Access]
+  IAP[IAP TCP forwarding range] -. SSH only to future tagged VMs .-> D
+  IAP -. SSH only to future tagged VMs .-> R
+  T[Terraform] --> F[Cloud Foundation Fabric net-vpc v59]
+  F --> D
+  F --> R
+
